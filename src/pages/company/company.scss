@@ -1,0 +1,21 @@
+page-company {
+  .content {
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to bottom, color($gradients, primary, from), color($gradients, primary, to));
+  }
+
+  .grid {
+    min-height: 100%;
+  }
+
+  .company-header {
+    height: 166px;
+    img {
+      transition: all 1s;
+    }
+    .selected-company {
+      font-weight: 500;
+    }
+  }
+}

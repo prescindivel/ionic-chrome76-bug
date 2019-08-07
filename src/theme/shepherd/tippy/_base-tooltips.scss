@@ -1,0 +1,39 @@
+@import 'popper-theme-arrows';
+
+/**
+ * Shepherd-Tippy tooltips have the following base structure:
+ *
+ * <div class="tippy-popper shepherd" x-placement="top">
+ *   <div class="tippy-tooltip">
+ *     <div class="tippy-content">
+ *       [[ Content Here ]]
+ *     </div>
+ *   </div>
+ * </div>
+ */
+
+.tippy-popper.shepherd-popper {
+  @include popper-theme-arrows($arrow-size: $arrow-size, $arrow-pointer-events: $arrow-pointer-events);
+
+  z-index: $shepherd-element-z-index;
+
+  .tippy-tooltip {
+    padding: 0;
+    background-color: $shepherd-text-background;
+    border-radius: 12px;
+
+    .tippy-arrow {
+      transform: scale($arrow-size);
+      z-index: $shepherd-element-z-index + 1;
+    }
+
+    .tippy-content {
+      max-height: $shepherd-element-max-height;
+      max-width: $shepherd-element-max-width;
+      padding: 0;
+      text-align: left;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  }
+}

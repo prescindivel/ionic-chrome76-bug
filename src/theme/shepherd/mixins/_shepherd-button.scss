@@ -1,0 +1,27 @@
+@mixin shepherd-button {
+  @include inline-block;
+
+  background-color: transparent;
+  border: 0;
+  color: color($colors, primary);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1em;
+  margin-right: 0.5em;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  padding: 16px 10px;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &.shepherd-button-secondary {
+    background-color: transparent;
+    color: color($text, 60);
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

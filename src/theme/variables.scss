@@ -1,0 +1,230 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+// QR Code
+ion-app[class*="cameraView"] {
+  &.app-root,
+  .app-root,
+  .nav-decor,
+  ion-content,
+  ion-content {
+    background: transparent none !important;
+  }
+
+  .tabbar {
+    display: none;
+  }
+
+  &:not(.cameraView-docs) .app-root {
+    opacity: 0 !important;
+  }
+}
+
+$font-family-base: "Open Sans";
+$font-family-display: "Titillium Web";
+
+$headings-font-weight: 500;
+$h1-font-size: 3.4rem;
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$text: (
+  white: #fff,
+  38: rgba(#000, .38),
+  60: rgba(#000, .60),
+  87: rgba(#000, .87),
+  100: rgba(#000, 1)
+);
+
+$colors: (
+  primary: (
+    base: #0D0D59,
+    contrast: #fff,
+
+    dark: #090940,
+    light: #111173,
+    bright: #2525FF,
+  ),
+  secondary: (
+    base: #9CCC65,
+    contrast: #fff,
+
+    dark: #8BC34A,
+    light: #AED581,
+    bright: #B2FF59,
+  ),
+  accent: (
+    base: #E91E63,
+    contrast: #fff,
+
+    dark: #D81B60,
+    light: #EC407A,
+    bright: #F50057,
+  ),
+  light: (
+    base: #fff,
+    contrast: color($text, 60)
+  ),
+  muted: (
+    base: rgba(#E6E6E6, .3),
+    contrast: color($text, 60)
+  ),
+  tabs: (
+    base: #fff,
+    contrast: #F50057
+  ),
+  dark: (
+    base: #4D4D4D,
+    contrast: #fff
+  ),
+  warning: (
+    base: #FFCC00,
+    contrast: #fff
+    ),
+  success: (
+    base: #4CD964,
+    contrast: #fff
+  ),
+  danger: (
+    base: #f53d3d,
+    contrast: #fff,
+  ),
+  inputColor: color($text, 60),
+  bgGrey: #F5F5F8
+);
+
+$gradients: (
+  primary: (
+    from: color($colors, primary, light),
+    to: color($colors, primary, dark),
+  )
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$font-family-ios-base: $font-family-base;
+
+$button-ios-height: 3em;
+$button-ios-border-radius: 6px;
+
+$item-ios-avatar-size: 40px;
+
+$alert-ios-max-width: 90vw;
+$alert-ios-border-radius: 16px;
+$alert-ios-background: #fff;
+$alert-ios-head-padding-top: $alert-ios-border-radius;
+$alert-ios-head-padding-bottom: $alert-ios-border-radius;
+$alert-ios-title-margin-top: 0;
+$alert-ios-title-font-size:  20px;
+$alert-ios-message-padding-top: $alert-ios-border-radius;
+$alert-ios-message-font-size: 16px;
+$alert-ios-message-text-color: color($text, 87);
+
+$text-input-ios-background-color: transparent;
+$text-input-ios-margin-start: 8px;
+
+$range-ios-knob-width: 20px;
+$range-ios-pin-color: color($text, 60) !important;
+
+$popover-ios-width: 210px;
+
+$card-ios-border-radius: 8px;
+$card-ios-box-shadow: 0 1px 3px rgba(#000, .2);
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+$font-family-md-base: $font-family-base;
+
+$button-md-height: $button-ios-height;
+$button-md-border-radius: $button-ios-border-radius;
+
+$toolbar-md-height: 81px;
+
+$item-md-avatar-size: $item-ios-avatar-size;
+
+$alert-md-max-width: $alert-ios-max-width;
+$alert-md-border-radius: $alert-ios-border-radius;
+$alert-md-background: $alert-ios-background;
+$alert-md-head-padding-top: $alert-ios-head-padding-top;
+$alert-md-head-padding-bottom: $alert-ios-head-padding-bottom;
+$alert-md-title-margin-top: $alert-ios-title-margin-top;
+$alert-md-title-font-size:  $alert-ios-title-font-size;
+$alert-md-message-padding-top: $alert-ios-message-padding-top;
+$alert-md-message-font-size: $alert-ios-message-font-size;
+$alert-md-message-text-color: $alert-ios-message-text-color;
+
+$text-input-md-background-color: $text-input-ios-background-color;
+
+$range-md-knob-width: $range-ios-knob-width;
+$range-md-pin-color: $range-ios-pin-color;
+
+$popover-md-width: $popover-ios-width;
+
+$card-md-border-radius: $card-ios-border-radius;
+$card-md-box-shadow: $card-ios-box-shadow;
+
+$action-sheet-md-button-text-color: color($text, 60);
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

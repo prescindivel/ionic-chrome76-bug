@@ -1,0 +1,46 @@
+<ion-content padding>
+  <ion-grid @ListAnimation no-padding align-items-stretch>
+    <ion-row @ItemAnimation class="company-header">
+      <ion-col display-flex justify-content-center align-items-center align-self-center text-center no-padding
+        color="light">
+        <img src="assets/imgs/informakon-logo@3x.png" height="46px">
+
+        <h2 class="selected-company display" text-light margin-bottom margin-left text-uppercase *ngIf="company">
+          {{ company.clientName || '' }}</h2>
+      </ion-col>
+    </ion-row>
+
+    <ion-row @ItemAnimation class="action-sheet-form" bg-light padding flex-direction-column margin-top>
+      <div margin-vertical>
+        <h6 no-margin text-60>Vamos começar...</h6>
+        <h1 class="display" text-primary no-margin>Qual é o nome da empresa em que você trabalha?</h1>
+      </div>
+
+      <h1>&nbsp;</h1>
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="companyForm">
+        <ion-item no-padding color="light">
+          <ion-input autocapitalize="none" spellcheck="false" formControlName="company" placeholder="Código da empresa">
+          </ion-input>
+        </ion-item>
+
+        <ion-item margin-top no-padding color="light">
+          <ion-input [brmasker]="{mask: '000.000.000-00', len: 14, type: 'num'}" type="tel" maxlength="14"
+            formControlName="cpf" placeholder="CPF"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+          <ion-label text-60>Lembrar login</ion-label>
+          <ion-checkbox color="primary" formControlName="rememberMe"></ion-checkbox>
+        </ion-item>
+
+        <div padding-top padding-bottom></div>
+
+        <button ion-button block type="submit" color="primary"
+          [disabled]="companyForm.invalid || companyForm.pending">Acessar conta</button>
+        <button ion-button block clear text-60 type="button">Novo no App? &nbsp; <span
+            text-primary>Criar conta</span></button>
+      </form>
+    </ion-row>
+  </ion-grid>
+</ion-content>
